@@ -10,7 +10,7 @@
       <!-- 【平板】立即購買 -->
       <!-- 
       <div class="buy-now-tab-btn" @click="buyNow">
-        <img src="/images/shopping-cart.png" />
+        <img src="/images/shopping-cart.png" alt="Shopping cart" />
       </div>
       -->
       <!-- 【桌機】滑到最上icon -->
@@ -25,11 +25,11 @@
           </h1>
           <div class="subtitle fz-24 lh-36 fz-mob-14 lh-mob-18 fw-500 fw-mob-700">
             <!-- enGo智慧中控平板，可用AI語音操作，整合智慧管家、商城、食譜、物業連結及訊息管理。 -->
-            <img class="engo-white" src="/images/footer_logo_white.png" />
+            <img class="engo-white" src="/images/footer_logo_white.png" alt="enGo logo" />
             {{ $t('product.tablet_intro.info') }}
           </div>
         </div>
-        <img src="/images/tablet_1.png" alt="tablet photo" />
+        <img src="/images/tablet_1.png" alt="tablet photo" loading="eager" />
       </div>
       <div class="gradient_container_i">
         <div class="brand_intro pt-88 pb-72 pt-tab-80 pb-tab-86 py-mob-0">
@@ -45,7 +45,7 @@
               class="product-describe fz-72 fw-700 text-grey-blue tac mt-36 mb-56 d-tab-none d-mob-none"
             >
               <!-- 【桌機】AI智慧管家中控平板 -->
-              <img src="/images/logo_darkblue.svg" />
+              <img src="/images/logo_darkblue.svg" alt="enGo logo" />
               {{ $t('product.brand_intro.title') }}
             </h2>
             <!-- 【手機】家中的大小事，都是智管家的事... -->
@@ -70,7 +70,7 @@
           </div>
           <div class="brand_desc d-flex">
             <div class="brand_desc_img d-mob-none">
-              <img src="/images/Frame74.png" alt="廚房平板位置" />
+              <img src="/images/Frame74.png" alt="廚房平板位置" loading="lazy" />
             </div>
             <div class="brand_desc_info pl-72 pr-100 pr-tab-74 px-mob-24 text-grey-blue fw-500">
               <h3 class="fw-500 fz-36 lh-50 text-grey-blue tac pt-30 mb-32 d-tab-none d-mob-none">
@@ -444,7 +444,7 @@
           <div class="mob_img_wrap d-none d-mob-block">
             <div class="d-flex jc-c ai-fe fz-24 fw-700 text-white">
               <!-- 【桌機】AI智慧管家中控平板 -->
-              <img class="engo-white mr-8" src="/images/footer_logo_white.png" />
+              <img class="engo-white mr-8" src="/images/footer_logo_white.png" alt="enGo logo" />
               <h3 class="fz-24 fw-700 text-white">
                 {{ $t('product.brand_intro.title') }}
               </h3>
@@ -596,11 +596,11 @@
           </div>
           <div class="filter-core container px-mob-24">
             <div class="qr-code-container">
-              <img src="/images/qr-code.png" />
+              <img src="/images/qr-code.png" alt="Insurance certificate QR code" />
               <div class="">投保證書</div>
             </div>
-            <img class="d-mob-none" src="/images/filter_side.png" alt="濾芯" />
-            <img class="d-none d-mob-block" src="/images/filter_core.png" alt="濾芯" />
+            <img class="d-mob-none" src="/images/filter_side.png" alt="濾芯" loading="lazy" />
+            <img class="d-none d-mob-block" src="/images/filter_core.png" alt="濾芯" loading="lazy" />
             <div class="d-none d-mob-flex fd-column ai-fe fz-16 lh-20 fw-700">
               <!-- 1. 一體式水路板 -->
               1. {{ $t('product.water_filter.filterCore01') }}<br />
@@ -637,11 +637,12 @@
             </div>
           </div>
           <div class="water-loop container px-mob-24">
-            <img class="d-mob-none" src="/images/water_loop.png" alt="強效過濾濾芯" />
+            <img class="d-mob-none" src="/images/water_loop.png" alt="強效過濾濾芯" loading="lazy" />
             <img
               class="d-none d-mob-block"
               src="/images/water_loop_mob.png"
               alt="強效過濾濾芯"
+              loading="lazy"
             />
           </div>
         </div>
@@ -652,7 +653,7 @@
             {{ $t('product.filter_types.title') }}
           </h3>
           <div class="img_wrap d-mob-none">
-            <img src="/images/filter_types.png" alt="強效過濾濾心" />
+            <img src="/images/filter_types.png" alt="強效過濾濾心" loading="lazy" />
           </div>
           <div class="img_wrap d-none d-mob-block">
             <swiper
@@ -672,13 +673,13 @@
               :lazy="true"
             >
               <swiper-slide>
-                <img src="/images/SRM.png" alt="SRM 富鍶礦化濾心" />
+                <img src="/images/SRM.png" alt="SRM 富鍶礦化濾心" loading="lazy" />
               </swiper-slide>
               <swiper-slide>
-                <img src="/images/RO.png" alt="RO逆滲透膜" />
+                <img src="/images/RO.png" alt="RO逆滲透膜" loading="lazy" />
               </swiper-slide>
               <swiper-slide>
-                <img src="/images/PPC.png" alt="PPC複合濾芯" />
+                <img src="/images/PPC.png" alt="PPC複合濾芯" loading="lazy" />
               </swiper-slide>
             </swiper>
           </div>
@@ -711,10 +712,10 @@
         :class="{ expand: targetExpand, close: !targetExpand }"
         class="filter_levels_mob d-none d-mob-block bg-grey-blue2"
       >
-        <img src="/images/filter_level_mob.png" />
+        <img src="/images/filter_level_mob.png" alt="Water filtration levels diagram" loading="lazy" />
       </div>
       <div class="filter_levels d-flex fd-column ai-c d-mob-none">
-        <img src="/images/filter_level.png" />
+        <img src="/images/filter_level.png" alt="Water filtration levels diagram" loading="lazy" />
         <div class="container filter-text-container">
           <h2 class="title text-white fz-72 lh-104 fz-tab-48 lh-tab-70 fw-700 mb-46 mb-tab-24">
             <!-- 進口RO，AI智慧淨濾，只為安心 -->

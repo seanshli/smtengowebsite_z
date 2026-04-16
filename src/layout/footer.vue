@@ -32,7 +32,7 @@
     </div>
     <div class="bottom">
       <div class="img-container">
-        <img class="logo_footer" src="/images/footer_logo_white.png" />
+        <img class="logo_footer" src="/images/footer_logo_white.png" alt="enGo logo" />
       </div>
       <div class="info-container">
         <div class="left">

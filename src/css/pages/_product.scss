@@ -181,7 +181,8 @@ body {
     background-size: cover;
 
     .title_wrap {
-        width: 870px;
+        max-width: 870px;
+        width: 100%;
 
         @media (max-width: 1024px) {
             width: 85vw;
@@ -209,7 +210,8 @@ body {
         align-items: center;
 
         .title_wrap {
-            width: 960px;
+            max-width: 960px;
+            width: 100%;
 
             @media (max-width: 1024px) {
                 width: 85vw;
@@ -328,8 +330,9 @@ body {
             width: fit-content;
 
             img {
-                width: 831px;
-                height: 535px;
+                max-width: 831px;
+                width: 100%;
+                height: auto;
             }
 
             @media (max-width: 1024px) and (min-width: 769px) {
@@ -491,7 +494,8 @@ body {
                 }
 
                 &_B {
-                    width: calc(100vw - 236px - 831px - 256px);
+                    flex: 1;
+                    min-width: 0;
                     height: 2px;
                     border: 2px solid $gold;
                     top: 60px;
@@ -499,7 +503,8 @@ body {
 
                     @media (max-width: 1024px) and (min-width: 900px) {
                         height: 2px;
-                        width: calc(100vw - 175px - 500px - 200px);
+                        flex: 1;
+                        min-width: 0;
                         top: 47px;
                         left: 175px;
                         border: 1px solid $gold;
@@ -507,7 +512,8 @@ body {
 
                     @media (max-width: 900px) and (min-width: 769px) {
                         height: 2px;
-                        width: calc(100vw - 175px - 500px - 96px);
+                        flex: 1;
+                        min-width: 0;
                         top: 47px;
                         left: 175px;
                         border: 1px solid $gold;
@@ -527,7 +533,8 @@ body {
                 }
 
                 &_C {
-                    width: calc(100vw - 236px - 831px - 325px);
+                    flex: 1;
+                    min-width: 0;
                     height: 2px;
                     border: 2px solid $gold;
                     // top: 482px;
@@ -537,7 +544,8 @@ body {
 
                     @media (max-width: 1024px) and (min-width: 900px) {
                         height: 2px;
-                        width: calc(100vw - 175px - 500px - 200px);
+                        flex: 1;
+                        min-width: 0;
                         top: 22px;
                         left: 172px;
                         border: 1px solid $gold;
@@ -545,7 +553,8 @@ body {
 
                     @media (max-width: 900px) and (min-width: 769px) {
                         height: 2px;
-                        width: calc(100vw - 175px - 500px - 96px);
+                        flex: 1;
+                        min-width: 0;
                         top: 22px;
                         left: 172px;
                         border: 1px solid $gold;

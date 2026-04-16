@@ -66,13 +66,17 @@ $text-color: (
 
 // spacing 管理
 $spacer: 2px;
-$rwd-breakpoints:"tab","mob";
+$rwd-breakpoints:"laptop","tab","mob-landscape","mob";
 $rwd-breakpoint-base:(
+  "laptop": 1400px,
   "tab": 1024px,
+  "mob-landscape": 768px,
   "mob": 768px
 );
 $rwd-breakpoint-min:(
+  "laptop": 1025px,
   "tab": 769px,
+  "mob-landscape": 568px,
   "mob": 0
 );
 $margin-direction:"t","r","b","l";

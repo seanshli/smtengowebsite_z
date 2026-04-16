@@ -85,6 +85,53 @@ export default defineComponent({
   transform: translateY(0);
 }
 
+@keyframes floatOrb {
+  0%, 100% {
+    transform: translate(0px, 0px);
+  }
+  33% {
+    transform: translate(30px, -40px);
+  }
+  66% {
+    transform: translate(-20px, 30px);
+  }
+}
+
+.grey-block-bg {
+  position: relative;
+  overflow: hidden;
+
+  // Floating decorative orb — top-left
+  &::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -12%;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(59, 190, 255, 0.1), transparent 65%);
+    animation: floatOrb 10s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  // Floating decorative orb — bottom-right
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -5%;
+    right: -8%;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(254, 139, 5, 0.12), transparent 65%);
+    animation: floatOrb 14s ease-in-out infinite reverse;
+    pointer-events: none;
+    z-index: 2;
+  }
+}
+
 .story-paragraph {
   font-size: 1.08rem;
   line-height: 2;
@@ -101,6 +148,29 @@ export default defineComponent({
     color: #e05a35;
     font-weight: 600;
   }
+}
+
+.core-value-section-bg-container {
+  position: relative;
+
+  // Additional floating orb accent
+  &::before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(224, 90, 53, 0.1), transparent 70%);
+    animation: floatOrb 13s ease-in-out infinite reverse;
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+.core-value-section-bg {
+  filter: brightness(0.95) saturate(1.1);
 }
 
 .section-second-title {

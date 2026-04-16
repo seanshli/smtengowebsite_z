@@ -97,7 +97,7 @@
     object-fit: cover;
     object-position: left;
     animation: slowZoom 20s ease-in-out infinite alternate;
-    filter: saturate(1.2) brightness(1.05);
+    filter: saturate(1.4) brightness(1.1) contrast(1.05);
 }
 
 @keyframes slowZoom {
@@ -141,7 +141,7 @@
     position: relative;
     z-index: 2;
     margin-bottom: 150px;
-    margin-left: 200px;
+    margin-left: clamp(40px, 10vw, 200px);
 
     .page-title {
         padding-bottom: 10px;
@@ -180,7 +180,7 @@
     }
 
     @media (max-width: 1024px) and (min-width: 769px) {
-        // tablet adjustments
+        margin-left: 80px;
     }
 
     @media (max-width: 768px) {
@@ -220,7 +220,7 @@
     position: relative;
     width: 100%;
     max-width: 600px;
-    margin-left: 200px;
+    margin-left: clamp(40px, 10vw, 200px);
     margin-top: 40px;
     padding: 36px;
     background: rgba(255, 255, 255, 0.85);

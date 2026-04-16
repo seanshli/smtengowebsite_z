@@ -81,6 +81,18 @@ export default defineComponent({
   transform: translateY(0);
 }
 
+@keyframes floatOrb {
+  0%, 100% {
+    transform: translate(0px, 0px);
+  }
+  33% {
+    transform: translate(30px, -40px);
+  }
+  66% {
+    transform: translate(-20px, 30px);
+  }
+}
+
 .mission-section {
   width: 100%;
   height: auto !important;
@@ -92,9 +104,40 @@ export default defineComponent({
   min-height: 420px;
   display: flex;
   align-items: center;
+  overflow: hidden;
 
   @media (max-width: 768px) {
     min-height: 320px;
+  }
+
+  // Floating decorative orb — top-left
+  &::before {
+    content: '';
+    position: absolute;
+    top: -5%;
+    left: -8%;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(254, 139, 5, 0.15), transparent 65%);
+    animation: floatOrb 9s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  // Floating decorative orb — bottom-right
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    right: -5%;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(224, 90, 53, 0.12), transparent 65%);
+    animation: floatOrb 12s ease-in-out infinite reverse;
+    pointer-events: none;
+    z-index: 2;
   }
 }
 
@@ -105,6 +148,21 @@ export default defineComponent({
   width: 100%;
   height: 100%;
   overflow: hidden;
+
+  // Additional floating orb accent
+  &::before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    right: 15%;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(59, 190, 255, 0.08), transparent 70%);
+    animation: floatOrb 11s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
 }
 
 .mission-section-image {
@@ -119,7 +177,7 @@ export default defineComponent({
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.65) 0%, rgba(224, 90, 53, 0.3) 100%);
+  background: linear-gradient(135deg, rgba(34, 66, 116, 0.5) 0%, rgba(224, 90, 53, 0.35) 50%, rgba(254, 139, 5, 0.2) 100%);
 }
 
 .mission-hero-text {

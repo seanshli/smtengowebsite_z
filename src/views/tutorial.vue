@@ -110,7 +110,7 @@
 import tutorialsData from '@/data/tutorials.json'
 import faqsData from '@/data/faqs.json'
 import knowledgeBaseData from '@/data/knowledge_base.json'
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useAnalytics } from '@/utils/analytics'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
@@ -235,6 +235,48 @@ const handleLinkClick = (e: MouseEvent) => {
     router.push({ path, query: queryObj })
   }
 }
+
+// --- FAQPage JSON-LD Structured Data ---
+let jsonLdScript: HTMLScriptElement | null = null
+
+const injectFaqJsonLd = () => {
+  // Use English FAQ data for search engines (default language)
+  const faqItems = (faqsData as any[]).map(faq => ({
+    '@type': 'Question',
+    'name': faq.question['en'] || faq.question['zh'],
+    'acceptedAnswer': {
+      '@type': 'Answer',
+      'text': faq.answer['en'] || faq.answer['zh']
+    }
+  }))
+
+  const jsonLdData = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': faqItems
+  }
+
+  // Create and inject script element
+  jsonLdScript = document.createElement('script')
+  jsonLdScript.type = 'application/ld+json'
+  jsonLdScript.textContent = JSON.stringify(jsonLdData)
+  document.head.appendChild(jsonLdScript)
+}
+
+const removeFaqJsonLd = () => {
+  if (jsonLdScript && jsonLdScript.parentNode) {
+    jsonLdScript.parentNode.removeChild(jsonLdScript)
+    jsonLdScript = null
+  }
+}
+
+onMounted(() => {
+  injectFaqJsonLd()
+})
+
+onUnmounted(() => {
+  removeFaqJsonLd()
+})
 </script>
 
 <style scoped lang="scss">

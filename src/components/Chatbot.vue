@@ -24,7 +24,7 @@
             <iframe :src="msg.mediaUrl" frameborder="0" allowfullscreen></iframe>
           </div>
           <div v-else-if="msg.type === 'catalog'" class="catalog-card">
-            <img :src="getImageUrl(msg.data.image)" class="product-img" />
+            <img :src="getImageUrl(msg.data.image)" class="product-img" :alt="msg.data.name || 'Product image'" />
             <h3>{{ msg.data.name }}</h3>
             <p class="description">{{ msg.data.description[locale] || msg.data.description.zh || msg.data.description }}</p>
             <div class="specs-table">
@@ -33,7 +33,7 @@
                 <span class="spec-val">{{ val }}</span>
               </div>
             </div>
-            <img v-if="msg.data.spec_image" :src="getImageUrl(msg.data.spec_image)" class="spec-img" />
+            <img v-if="msg.data.spec_image" :src="getImageUrl(msg.data.spec_image)" class="spec-img" :alt="(msg.data.name || 'Product') + ' specifications'" />
           </div>
           <div v-if="msg.type === 'handover'" class="handover-container">
             <div class="text mb-2" v-html="formatMessage(msg.text)"></div>
