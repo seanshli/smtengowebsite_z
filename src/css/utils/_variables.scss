@@ -1,0 +1,126 @@
+// ─── Vivid Warm Color Palette ───
+$brand-blue: #224274;
+$brand-orange: #e05a35;
+$grey-blue: #1A3A5B;
+$grey-blue2: #043655;
+$grey-blue3: #152939;
+$light-grey: #f4f4f4;
+$dark-grey: #5c5c5c;
+$light-blue: #3bbeff;
+$green: #179c8d;
+$yellow: #eb9f0c;
+$gold: #C7B763;
+$orange2: #FE8B05;
+
+// ─── Vivid Warm Accents ───
+$warm-gradient: linear-gradient(135deg, #e05a35, #FE8B05);
+$warm-gradient-soft: linear-gradient(135deg, #f8a068, #f06543);
+$blue-gradient: linear-gradient(135deg, #224274, #3bbeff);
+$sunset-gradient: linear-gradient(135deg, #e05a35, #eb9f0c, #C7B763);
+$warm-glow: rgba(224, 90, 53, 0.35);
+$gold-glow: rgba(199, 183, 99, 0.3);
+$blue-glow: rgba(59, 190, 255, 0.25);
+$warm-bg-light: #fefbf6;
+$warm-bg-cream: #fdf5ec;
+$warm-bg-section: #f9f3eb;
+$warm-shadow: 0 8px 30px rgba(34, 66, 116, 0.1);
+$warm-shadow-hover: 0 16px 50px rgba(34, 66, 116, 0.18);
+
+// fonts 文字管理
+$fz-root: 1px;
+$fw-code:"n","l","b","bk";
+$font-weight-base:(
+  "n":normal,
+  "l":lighter,
+  "b":bold,
+  "bk":bolder,
+);
+
+$text-align:"l","c","r";
+$text-align-base:(
+  "l":left,
+  "c":center,
+  "r":right
+);
+
+
+// 色碼管理
+$gray-color:"333","666","999","aaa","bbb","ccc","ddd","eee";
+$colors: "white", "brand-blue", "brand-orange", "grey-blue", "grey-blue2", "grey-blue3", "light-grey", "dark-grey", "light-blue", "green", "yellow", "orange", "gold", "orange2";
+$text-color: (
+  "white": #fff,
+  "brand-blue": $brand-blue,
+  "brand-orange": $brand-orange,
+  "grey-blue": $grey-blue,
+  "grey-blue2": $grey-blue2,
+  "grey-blue3": $grey-blue3,
+  "light-grey": $light-grey,
+  "dark-grey": $dark-grey,
+  "light-blue": $light-blue,
+  "green": $green,
+  "yellow": $yellow,
+  "orange": orange,
+  "orange2": $orange2,
+  "gold": $gold
+);
+
+// spacing 管理
+$spacer: 2px;
+$rwd-breakpoints:"tab","mob";
+$rwd-breakpoint-base:(
+  "tab": 1024px,
+  "mob": 768px
+);
+$rwd-breakpoint-min:(
+  "tab": 769px,
+  "mob": 0
+);
+$margin-direction:"t","r","b","l";
+$margin-direction-base:(
+  "t":"top",
+  "r":"right",
+  "b":"bottom",
+  "l":"left"
+);
+$padding-direction:"t","r","b","l";
+$padding-direction-base:(
+  "t":"top",
+  "r":"right",
+  "b":"bottom",
+  "l":"left"
+);
+
+// display
+$display: none,block,inline-block,flex,inline-flex,table;
+
+// position
+$position: "s","a","r","f";
+$position-base:(
+  "s":static,
+  "a":absolute,
+  "r":relative,
+  "f":fixed
+);
+
+
+// flex 管理
+$flex-direction: row,column,row-reverse,column-reverse;
+
+$flex-wrap:"w","nw","wr";
+$flex-wrap-base:(
+  "w":wrap,
+  "nw":nowrap,
+  "wr":wrap-reverse
+);
+
+$justify-content:"fs","fe","c","sb","sa","se","stretch","baseline";
+$justify-content-base:(
+  "fs":flex-start,
+  "fe":flex-end,
+  "c":center,
+  "sb":space-between,
+  "sa":space-around,
+  "se":space-evenly,
+  "stretch":stretch,
+  "baseline":baseline
+);
