@@ -87,7 +87,7 @@ export function useSeo() {
     ensureMeta('name', 'twitter:card', 'summary_large_image')
     ensureMeta('name', 'twitter:title', title)
     ensureMeta('name', 'twitter:description', description)
-    ensureMeta('name', 'twitter:image', `${BASE_URL}/logo.png`)
+    ensureMeta('name', 'twitter:image', `${BASE_URL}/og-image-1200x630.jpg`)
 
     // 7. Canonical link
     let canonical = document.querySelector('link[rel="canonical"]')
