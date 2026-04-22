@@ -445,7 +445,49 @@ export const zhLocale = {
     },
     air_purifier: {
       tag: '空氣清淨機',
-      title: '智能空氣清淨機系列'
+      title: '智能空氣清淨機系列',
+      headline: '一機四用，守護全家每一口呼吸',
+      subHeadline: '空氣清淨 × SoundBox × 無線充電 × 香氛擴香',
+      modelLabel: '型號',
+      modelBlack: 'EAP-01B 曜石黑',
+      modelWhite: 'EAP-01W 月光白',
+      features: {
+        filter: {
+          title: '三重過濾淨化',
+          desc: 'HEPA12 + NIH1 + 銀離子 Silver Ionizer，PM2.5、細菌、異味一次淨化'
+        },
+        sound: {
+          title: 'SoundBox 藍牙音響',
+          desc: '內建高音質藍牙喇叭，淨化同時享受音樂'
+        },
+        charge: {
+          title: 'Qi 無線充電',
+          desc: '頂蓋即放即充，手機放上就開始充電'
+        },
+        aroma: {
+          title: '香氛擴香',
+          desc: '搭配專屬精油，淨化空氣同時釋放療癒香氛'
+        }
+      },
+      specs: {
+        title: '規格總覽',
+        filterLifeLabel: '濾網壽命',
+        filterLifeValue: '3–6 個月（依空氣品質而定）',
+        certLabel: '認證',
+        certValue: 'NCC · BSMI',
+        coverageLabel: '適用坪數',
+        coverageValue: '8–10 坪',
+        noiseLabel: '最大噪音',
+        noiseValue: '< 61 dB'
+      },
+      price: {
+        tag: '早鳥優惠',
+        msrpLabel: '建議售價',
+        msrp: 'NT$12,000',
+        promo: 'NT$8,000',
+        bonus: '加贈一組原廠濾網',
+        btn: '立即購買'
+      }
     },
     reviews: {
       title: '用戶評價',

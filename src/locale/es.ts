@@ -245,7 +245,49 @@ export const esLocale = {
     air_purifier: {
       tag: 'Purificador de Aire',
       title: 'Serie de Purificador de Aire Inteligente',
-      desc: 'Filtración de grado médico HEPA 13 que elimina efectivamente PM2.5, formaldehído y bacterias.'
+      desc: 'Filtración de grado médico HEPA 13 que elimina efectivamente PM2.5, formaldehído y bacterias.',
+      headline: 'Un dispositivo, cuatro esenciales — para cada respiración en casa',
+      subHeadline: 'Purificación × SoundBox × Carga inalámbrica × Difusor de aroma',
+      modelLabel: 'Modelo',
+      modelBlack: 'EAP-01B Negro Obsidiana',
+      modelWhite: 'EAP-01W Blanco Lunar',
+      features: {
+        filter: {
+          title: 'Filtración de triple capa',
+          desc: 'HEPA12 + NIH1 + Ionizador de plata — captura PM2.5, bacterias y olores en una pasada'
+        },
+        sound: {
+          title: 'Altavoz Bluetooth SoundBox',
+          desc: 'Altavoz Bluetooth premium incorporado — purifica el aire mientras disfrutas de la música'
+        },
+        charge: {
+          title: 'Carga inalámbrica Qi',
+          desc: 'Cargador inalámbrico en la parte superior — apoya tu teléfono y empieza a cargar'
+        },
+        aroma: {
+          title: 'Difusor de aroma',
+          desc: 'Usa aceites esenciales dedicados para liberar un aroma relajante durante la purificación'
+        }
+      },
+      specs: {
+        title: 'Especificaciones',
+        filterLifeLabel: 'Vida del filtro',
+        filterLifeValue: '3–6 meses (según la calidad del aire)',
+        certLabel: 'Certificación',
+        certValue: 'NCC · BSMI',
+        coverageLabel: 'Cobertura',
+        coverageValue: '8–10 ping (≈26–33 m²)',
+        noiseLabel: 'Ruido máx.',
+        noiseValue: '< 61 dB'
+      },
+      price: {
+        tag: 'Oferta madrugadora',
+        msrpLabel: 'PVP',
+        msrp: 'NT$12.000',
+        promo: 'NT$8.000',
+        bonus: 'Incluye un juego de filtros adicional',
+        btn: 'Comprar ahora'
+      }
     },
     tablet_intro: {
       title: 'Tableta Centro Inteligente AI',

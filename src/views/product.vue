@@ -1045,16 +1045,88 @@
         <div class="background_B">
         <div class="competitor container d-flex fd-column ai-c py-80 py-mob-0">
           <div class="tag as-fs mb-12">
-            <img src="/assets/radar.svg" alt="{{ $t('product.air_purifier.tag') }} icon" />
+            <img src="/assets/radar.svg" :alt="$t('product.air_purifier.tag') + ' icon'" />
             <span>
-              <!-- 產品比較 -->
               {{ $t('product.air_purifier.tag') }}
             </span>
           </div>
-          <h2 class="text-white fz-72 lh-104 fz-tab-48 lh-tab-70 fw-700 d-mob-none">
-            <!-- 水維氧AI智慧淨水系統 -->
+
+          <!-- Title + headline block -->
+          <h2 class="text-white fz-72 lh-104 fz-tab-48 lh-tab-70 fz-mob-30 lh-mob-40 fw-700 tac">
             {{ $t('product.air_purifier.title') }}
           </h2>
+          <h3 class="text-gold fz-28 lh-38 fz-mob-18 lh-mob-24 fw-500 tac mt-12 mb-8">
+            {{ $t('product.air_purifier.headline') }}
+          </h3>
+          <p class="text-white fz-18 lh-26 fz-mob-14 lh-mob-20 tac op-80 mb-24">
+            {{ $t('product.air_purifier.subHeadline') }}
+          </p>
+          <div class="ap-model-row text-white fz-14 fw-500 mb-40">
+            <span class="ap-model-label">{{ $t('product.air_purifier.modelLabel') }}：</span>
+            <span class="ap-model-pill">{{ $t('product.air_purifier.modelBlack') }}</span>
+            <span class="ap-model-pill">{{ $t('product.air_purifier.modelWhite') }}</span>
+          </div>
+
+          <!-- 4-feature grid -->
+          <div class="ap-features-grid">
+            <div class="ap-feature-card">
+              <div class="ap-feature-num">01</div>
+              <h4>{{ $t('product.air_purifier.features.filter.title') }}</h4>
+              <p>{{ $t('product.air_purifier.features.filter.desc') }}</p>
+            </div>
+            <div class="ap-feature-card">
+              <div class="ap-feature-num">02</div>
+              <h4>{{ $t('product.air_purifier.features.sound.title') }}</h4>
+              <p>{{ $t('product.air_purifier.features.sound.desc') }}</p>
+            </div>
+            <div class="ap-feature-card">
+              <div class="ap-feature-num">03</div>
+              <h4>{{ $t('product.air_purifier.features.charge.title') }}</h4>
+              <p>{{ $t('product.air_purifier.features.charge.desc') }}</p>
+            </div>
+            <div class="ap-feature-card">
+              <div class="ap-feature-num">04</div>
+              <h4>{{ $t('product.air_purifier.features.aroma.title') }}</h4>
+              <p>{{ $t('product.air_purifier.features.aroma.desc') }}</p>
+            </div>
+          </div>
+
+          <!-- Specs strip -->
+          <div class="ap-specs-strip">
+            <div class="ap-spec-cell">
+              <div class="ap-spec-label">{{ $t('product.air_purifier.specs.filterLifeLabel') }}</div>
+              <div class="ap-spec-value">{{ $t('product.air_purifier.specs.filterLifeValue') }}</div>
+            </div>
+            <div class="ap-spec-cell">
+              <div class="ap-spec-label">{{ $t('product.air_purifier.specs.certLabel') }}</div>
+              <div class="ap-spec-value">{{ $t('product.air_purifier.specs.certValue') }}</div>
+            </div>
+            <div class="ap-spec-cell">
+              <div class="ap-spec-label">{{ $t('product.air_purifier.specs.coverageLabel') }}</div>
+              <div class="ap-spec-value">{{ $t('product.air_purifier.specs.coverageValue') }}</div>
+            </div>
+            <div class="ap-spec-cell">
+              <div class="ap-spec-label">{{ $t('product.air_purifier.specs.noiseLabel') }}</div>
+              <div class="ap-spec-value">{{ $t('product.air_purifier.specs.noiseValue') }}</div>
+            </div>
+          </div>
+
+          <!-- Price + CTA block -->
+          <div class="ap-price-card">
+            <div class="ap-price-flag">{{ $t('product.air_purifier.price.tag') }}</div>
+            <div class="ap-price-amounts">
+              <span class="ap-price-msrp">
+                <span class="ap-price-msrp-label">{{ $t('product.air_purifier.price.msrpLabel') }}</span>
+                <s>{{ $t('product.air_purifier.price.msrp') }}</s>
+              </span>
+              <span class="ap-price-promo">{{ $t('product.air_purifier.price.promo') }}</span>
+            </div>
+            <div class="ap-price-bonus">★ {{ $t('product.air_purifier.price.bonus') }}</div>
+            <button class="ap-buy-btn" @click="buyAirPurifier">
+              {{ $t('product.air_purifier.price.btn') }}
+            </button>
+          </div>
+
           <div class="competitor_img d-mob-none">
             <img src="/images/AirPurifier001.png" alt="" />
             <img src="/images/AirPurifier002.png" alt="" />
@@ -1209,6 +1281,10 @@ export default defineComponent({
       window.open('https://h5.smtengo.com/pages/item/espier-detail?id=435&dtid=0')
     }
 
+    const buyAirPurifier = () => {
+      window.open('https://h5.smtengo.com/pages/item/espier-detail?id=352&dtid=0')
+    }
+
     const targetExpand = ref(false)
     const expandImg = () => {
       targetExpand.value = true
@@ -1281,8 +1357,218 @@ export default defineComponent({
       openCatalogMenu,
       closeCatalogMenu,
       selectCatalogProduct,
-      closeCatalog
+      closeCatalog,
+      buyAirPurifier
     }
   }
 })
 </script>
+
+<style scoped lang="scss">
+// --- Air Purifier (#oxygen1) section styles ---
+.op-80 { opacity: 0.8; }
+
+.ap-model-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.02em;
+}
+.ap-model-label {
+  opacity: 0.7;
+}
+.ap-model-pill {
+  padding: 4px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+  font-size: 0.85rem;
+  backdrop-filter: blur(2px);
+}
+
+.ap-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto 60px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 28px auto 40px;
+  }
+}
+.ap-feature-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 24px 20px;
+  color: #fff;
+  transition: transform 0.3s ease, background 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .ap-feature-num {
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    color: #FE8B05;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0 0 8px;
+    line-height: 1.4;
+  }
+  p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.82;
+    margin: 0;
+  }
+}
+
+.ap-specs-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 48px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.ap-spec-cell {
+  padding: 18px 16px;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  color: #fff;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  @media (max-width: 768px) {
+    &:nth-child(2n) { border-right: none; }
+    &:nth-child(-n+2) { border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+  }
+
+  .ap-spec-label {
+    font-size: 0.78rem;
+    opacity: 0.65;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+  .ap-spec-value {
+    font-size: 0.98rem;
+    font-weight: 600;
+  }
+}
+
+.ap-price-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 32px 40px;
+  background: linear-gradient(135deg, rgba(224, 90, 53, 0.18), rgba(254, 139, 5, 0.12));
+  border: 1px solid rgba(254, 139, 5, 0.35);
+  border-radius: 18px;
+  margin: 0 auto 56px;
+  max-width: 520px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 6px 28px rgba(224, 90, 53, 0.15);
+
+  @media (max-width: 560px) {
+    padding: 24px 20px;
+    margin-bottom: 36px;
+  }
+}
+.ap-price-flag {
+  display: inline-block;
+  background: #e05a35;
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.ap-price-amounts {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.ap-price-msrp {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  opacity: 0.6;
+
+  .ap-price-msrp-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 2px;
+  }
+  s { font-size: 1.05rem; }
+}
+.ap-price-promo {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #FE8B05;
+  letter-spacing: 0.01em;
+
+  @media (max-width: 560px) {
+    font-size: 2rem;
+  }
+}
+.ap-price-bonus {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffd9a8;
+  letter-spacing: 0.02em;
+}
+.ap-buy-btn {
+  margin-top: 6px;
+  padding: 12px 48px;
+  background: linear-gradient(90deg, #e05a35, #FE8B05);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 18px rgba(224, 90, 53, 0.35);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(224, 90, 53, 0.5);
+  }
+  &:active {
+    transform: translateY(0);
+  }
+}
+</style>

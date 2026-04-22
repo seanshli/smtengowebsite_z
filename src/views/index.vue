@@ -77,12 +77,12 @@
           class="news-card fade-in"
         >
           <div class="news-card-image" v-if="item.image">
-            <img :src="item.image" :alt="item.title[locale] || item.title['en']" />
+            <img :src="item.image" :alt="tr(item.title)" />
           </div>
           <div class="news-card-body">
             <span class="news-date">{{ formatDate(item.date) }}</span>
-            <h4 class="news-title">{{ item.title[locale] || item.title['en'] }}</h4>
-            <p class="news-summary">{{ item.summary[locale] || item.summary['en'] }}</p>
+            <h4 class="news-title">{{ tr(item.title) }}</h4>
+            <p class="news-summary">{{ tr(item.summary) }}</p>
           </div>
         </div>
       </div>
@@ -95,15 +95,29 @@ import { defineComponent, ref, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import newsData from '@/data/news.json'
 
+type NewsLocale = 'zh' | 'zhCN' | 'en' | 'fr' | 'ja' | 'es'
+
 export default defineComponent({
   name: 'Home',
   setup() {
     const { locale } = useI18n()
     const newsItems = ref(newsData)
 
+    // Type-safe localized field accessor.
+    // locale.value is typed as a broad `string` by vue-i18n, so TS can't index
+    // our narrow { zh, zhCN, en, fr, ja, es } record without a cast.
+    const tr = (field: Record<NewsLocale, string>): string =>
+      field[locale.value as NewsLocale] || field.en
+
     const formatDate = (dateStr: string) => {
       const date = new Date(dateStr)
-      return date.toLocaleDateString(locale.value === 'zh' || locale.value === 'zhCN' ? 'zh-TW' : locale.value === 'ja' ? 'ja-JP' : locale.value === 'fr' ? 'fr-FR' : locale.value === 'es' ? 'es-ES' : 'en-US', {
+      const loc = locale.value as NewsLocale
+      const dateLocale =
+        loc === 'zh' || loc === 'zhCN' ? 'zh-TW' :
+        loc === 'ja' ? 'ja-JP' :
+        loc === 'fr' ? 'fr-FR' :
+        loc === 'es' ? 'es-ES' : 'en-US'
+      return date.toLocaleDateString(dateLocale, {
         year: 'numeric',
         month: 'long',
         day: 'numeric'
@@ -132,6 +146,7 @@ export default defineComponent({
     return {
       locale,
       newsItems,
+      tr,
       formatDate,
       scrollToNews
     }

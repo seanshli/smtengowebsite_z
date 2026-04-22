@@ -243,7 +243,49 @@ export const frLocale = {
   product: {
     air_purifier: {
       tag: 'Purificateur d\'air',
-      title: 'Série de purificateurs d\'air intelligents'
+      title: 'Série de purificateurs d\'air intelligents',
+      headline: 'Un appareil, quatre essentiels — pour chaque respiration à la maison',
+      subHeadline: 'Purification × SoundBox × Recharge sans fil × Diffuseur d\'arôme',
+      modelLabel: 'Modèle',
+      modelBlack: 'EAP-01B Noir Obsidienne',
+      modelWhite: 'EAP-01W Blanc Lunaire',
+      features: {
+        filter: {
+          title: 'Filtration triple couche',
+          desc: 'HEPA12 + NIH1 + Ioniseur d\'argent — capture PM2.5, bactéries et odeurs en un passage'
+        },
+        sound: {
+          title: 'Enceinte Bluetooth SoundBox',
+          desc: 'Haut-parleur Bluetooth intégré — purifiez l\'air tout en écoutant de la musique'
+        },
+        charge: {
+          title: 'Recharge sans fil Qi',
+          desc: 'Chargeur sans fil sur le dessus — posez votre téléphone, il se charge'
+        },
+        aroma: {
+          title: 'Diffuseur d\'arôme',
+          desc: 'Huiles essentielles dédiées pour diffuser un parfum apaisant pendant la purification'
+        }
+      },
+      specs: {
+        title: 'Spécifications',
+        filterLifeLabel: 'Durée du filtre',
+        filterLifeValue: '3–6 mois (selon la qualité de l\'air)',
+        certLabel: 'Certification',
+        certValue: 'NCC · BSMI',
+        coverageLabel: 'Couverture',
+        coverageValue: '8–10 ping (≈26–33 m²)',
+        noiseLabel: 'Bruit max.',
+        noiseValue: '< 61 dB'
+      },
+      price: {
+        tag: 'Offre lève-tôt',
+        msrpLabel: 'Prix conseillé',
+        msrp: 'NT$12 000',
+        promo: 'NT$8 000',
+        bonus: 'Un jeu de filtres offert',
+        btn: 'Acheter'
+      }
     },
     reviews: {
       title: 'Avis des utilisateurs',

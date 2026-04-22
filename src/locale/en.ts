@@ -245,7 +245,49 @@ export const enLocale = {
     air_purifier: {
       tag: 'Air Purifier',
       title: 'Smart Air Purifier Series',
-      desc: 'HEPA 13 medical grade filtration effectively removes PM2.5, formaldehyde, and bacteria.'
+      desc: 'HEPA 13 medical grade filtration effectively removes PM2.5, formaldehyde, and bacteria.',
+      headline: 'One device, four essentials — for every breath at home',
+      subHeadline: 'Air purification × SoundBox × Wireless charging × Aroma diffuser',
+      modelLabel: 'Model',
+      modelBlack: 'EAP-01B Obsidian Black',
+      modelWhite: 'EAP-01W Moonlight White',
+      features: {
+        filter: {
+          title: 'Triple-layer filtration',
+          desc: 'HEPA12 + NIH1 + Silver Ionizer — captures PM2.5, bacteria, and odors in one pass'
+        },
+        sound: {
+          title: 'SoundBox Bluetooth speaker',
+          desc: 'Built-in premium Bluetooth speaker — purify the air while you enjoy music'
+        },
+        charge: {
+          title: 'Qi wireless charging',
+          desc: 'Top-panel wireless charger — drop your phone, it starts charging'
+        },
+        aroma: {
+          title: 'Aroma diffuser',
+          desc: 'Use proprietary essential oils to release calming scent as air is purified'
+        }
+      },
+      specs: {
+        title: 'Specs',
+        filterLifeLabel: 'Filter life',
+        filterLifeValue: '3–6 months (depending on air quality)',
+        certLabel: 'Certification',
+        certValue: 'NCC · BSMI',
+        coverageLabel: 'Coverage',
+        coverageValue: '8–10 ping (≈26–33 m²)',
+        noiseLabel: 'Max noise',
+        noiseValue: '< 61 dB'
+      },
+      price: {
+        tag: 'Early-bird offer',
+        msrpLabel: 'MSRP',
+        msrp: 'NT$12,000',
+        promo: 'NT$8,000',
+        bonus: 'Includes one bonus filter set',
+        btn: 'Buy now'
+      }
     },
     tablet_intro: {
       title: 'AI Smart Hub Tablet',

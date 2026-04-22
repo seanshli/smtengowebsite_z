@@ -310,7 +310,49 @@ export const jaLocale = {
         },
         air_purifier: {
             tag: '空気清浄機',
-            title: 'スマート空気清淨機シリーズ'
+            title: 'スマート空気清浄機シリーズ',
+            headline: '一台四役、家族の一呼吸を守る',
+            subHeadline: '空気清浄 × SoundBox × ワイヤレス充電 × アロマディフューザー',
+            modelLabel: 'モデル',
+            modelBlack: 'EAP-01B オブシディアンブラック',
+            modelWhite: 'EAP-01W ムーンライトホワイト',
+            features: {
+                filter: {
+                    title: '三層フィルター浄化',
+                    desc: 'HEPA12 + NIH1 + シルバーイオン — PM2.5・細菌・匂いを一度に除去'
+                },
+                sound: {
+                    title: 'SoundBox Bluetoothスピーカー',
+                    desc: '高音質Bluetoothスピーカー内蔵。浄化しながら音楽を楽しめます'
+                },
+                charge: {
+                    title: 'Qi ワイヤレス充電',
+                    desc: '天面に置くだけで充電開始。スマホを置けば充電スタート'
+                },
+                aroma: {
+                    title: 'アロマディフューザー',
+                    desc: '専用エッセンシャルオイルで、清浄しながら癒しの香りを放出'
+                }
+            },
+            specs: {
+                title: '仕様',
+                filterLifeLabel: 'フィルター寿命',
+                filterLifeValue: '3〜6ヶ月（空気品質により異なる）',
+                certLabel: '認証',
+                certValue: 'NCC · BSMI',
+                coverageLabel: '適用畳数',
+                coverageValue: '8〜10坪（約26〜33㎡）',
+                noiseLabel: '最大騒音',
+                noiseValue: '< 61 dB'
+            },
+            price: {
+                tag: '早期割引',
+                msrpLabel: '希望小売価格',
+                msrp: 'NT$12,000',
+                promo: 'NT$8,000',
+                bonus: '純正フィルター1セットプレゼント',
+                btn: '今すぐ購入'
+            }
         },
         reviews: {
             title: 'カスタマーレビュー',
