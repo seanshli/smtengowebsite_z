@@ -1032,7 +1032,7 @@
               <span class="subtitle fz-20 lh-28 fw-400">
                 {{ $t('product.purchase.desc') }}
               </span>
-              <div class="price tar fz-48 fw-500">＄39,800</div>
+              <div class="price tar fz-48 fw-500">＄18,000</div>
             </div>
           </div>
         </div>-->
@@ -1293,12 +1293,14 @@ export default defineComponent({
 
     const buyNow = () => {
       trackEvent('buy_now_click', {
-        product_id: '435',
+        product_id: '428',
         product_name: 'engo_water_purifier',
         product_category: 'water_purifier',
+        product_sku: 'ENGO-WATER',
+        price_twd: 18000,
         locale: locale.value
       })
-      window.open('https://h5.smtengo.com/pages/item/espier-detail?id=435&dtid=0')
+      window.open('https://h5.smtengo.com/pages/item/espier-detail?id=428&dtid=0')
     }
 
     const buyAirPurifier = () => {

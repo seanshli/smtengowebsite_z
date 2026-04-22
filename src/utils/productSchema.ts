@@ -44,7 +44,7 @@ const PRODUCTS: ProductDef[] = [
     sku: 'ENGO-HUB',
     anchor: 'tablet',
     image: `${BASE_URL}/images/product/engo-hub.jpg`,
-    priceTWD: null, // bundled price only; not sold standalone at this time
+    priceTWD: 8000, // early-bird promo; MSRP 12,000 TWD
     name: {
       zh: 'enGo AI智慧中控平板',
       zhCN: 'enGo AI智慧中控平板',
@@ -67,7 +67,7 @@ const PRODUCTS: ProductDef[] = [
     sku: 'ENGO-WATER',
     anchor: 'oxygen',
     image: `${BASE_URL}/images/product/water-purifier.jpg`,
-    priceTWD: 39800,
+    priceTWD: 18000, // early-bird promo; MSRP 21,000 TWD
     name: {
       zh: '水維氧 AI智慧淨水系統',
       zhCN: '水维氧 AI智慧净水系统',
