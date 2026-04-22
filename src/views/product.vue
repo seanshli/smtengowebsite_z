@@ -1207,11 +1207,12 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { defineComponent, ref, watchEffect, defineAsyncComponent } from 'vue'
+import { defineComponent, ref, watch, watchEffect, onMounted, onUnmounted, defineAsyncComponent } from 'vue'
 import type { CountUpOptions, ICountUp } from 'vue-countup-v3'
 import CountUp from 'vue-countup-v3'
 import { useRouter } from 'vue-router'
 import { useAnalytics } from '@/utils/analytics'
+import { injectProductSchemas, cleanupProductSchemas } from '@/utils/productSchema'
 import { useI18n } from 'vue-i18n'
 
 export default defineComponent({
@@ -1229,6 +1230,19 @@ export default defineComponent({
     const targetIsVisible = ref(false)
     const router = useRouter()
     const hasHeader = ref(true)
+    const { trackEvent } = useAnalytics()
+
+    // Product JSON-LD schema injection for SEO rich results — re-inject on locale change
+    onMounted(() => {
+      injectProductSchemas(locale.value)
+    })
+    watch(locale, (newLocale) => {
+      injectProductSchemas(newLocale)
+    })
+    onUnmounted(() => {
+      cleanupProductSchemas()
+    })
+
     // coutup.js options
     const endValueRef = ref(2000)
     const options: CountUpOptions = {
@@ -1278,10 +1292,24 @@ export default defineComponent({
     )
 
     const buyNow = () => {
+      trackEvent('buy_now_click', {
+        product_id: '435',
+        product_name: 'engo_water_purifier',
+        product_category: 'water_purifier',
+        locale: locale.value
+      })
       window.open('https://h5.smtengo.com/pages/item/espier-detail?id=435&dtid=0')
     }
 
     const buyAirPurifier = () => {
+      trackEvent('buy_now_click', {
+        product_id: '352',
+        product_name: 'engo_air_purifier',
+        product_category: 'air_purifier',
+        product_sku: 'EAP-01',
+        price_twd: 8000,
+        locale: locale.value
+      })
       window.open('https://h5.smtengo.com/pages/item/espier-detail?id=352&dtid=0')
     }
 
